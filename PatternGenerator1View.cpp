@@ -78,9 +78,21 @@ void CPatternGenerator1View::OnDraw(CDC* pDC)
 	strData.Format(_T("The Counter = %d"), m_iCounter);
 	//pDC->TextOut(100, 100, strData);
 	
-	pDC->Ellipse(175, 175, 700, 425);
-	pDC->Ellipse(200, 200, 600, 400);
-	pDC->Ellipse(325, 250, 425, 350);
+	CPen  blackPen(PS_SOLID, 5, RGB(0, 0, 0));
+	CBrush whiteBrush(RGB(255, 255, 255));
+	CPen* pOldPen = pDC->SelectObject(&blackPen);
+	CBrush* pOldBrush = pDC->SelectObject(&whiteBrush);
+
+	pDC->Ellipse(150, 100, 800, 500); // Draw the first ellipse
+
+	pDC->Ellipse(200, 200, 600, 400); // Draw the second ellipse
+
+	CPen  orangePen(PS_SOLID, 5, RGB(255, 153, 0));
+	CBrush yellowBrush(RGB(255, 255, 0));
+	pOldPen = pDC->SelectObject(&orangePen);
+	pOldBrush = pDC->SelectObject(&yellowBrush);
+
+	pDC->Ellipse(250, 250, 350, 350); // Draw the third ellipse
 	
 	int l = m_PointArray.GetSize() - 2;
 	for (int i = 0; i < l; i++) {
@@ -89,14 +101,24 @@ void CPatternGenerator1View::OnDraw(CDC* pDC)
 			//pDC->LineTo(m_PointArray[i + 1].x, m_PointArray[i + 1].y);
 			double x = m_PointArray[i].x;
 			double y = m_PointArray[i].y;
-			double r = 5;
+			double r = 15;
+
+			CPen  grey1Pen(PS_SOLID, 5, RGB(179, 179, 179));
+			CBrush grey2Brush(RGB(128, 128, 128));
+			pOldPen = pDC->SelectObject(&grey1Pen);
+			pOldBrush = pDC->SelectObject(&grey2Brush);
 			pDC->Ellipse(x - r, y - r, x + r, y + r);
 
 			pDC->MoveTo(m_PointArray1[i].x, m_PointArray1[i].y);
 			//pDC->LineTo(m_PointArray[i + 1].x, m_PointArray[i + 1].y);
 			x = m_PointArray1[i].x;
 			y = m_PointArray1[i].y;
-			r = 10;
+			r = 25;
+
+			CPen  orange1Pen(PS_SOLID, 5, RGB(255, 153, 51));
+			CBrush redBrush(RGB(255, 0, 0));
+			pOldPen = pDC->SelectObject(&orange1Pen);
+			pOldBrush = pDC->SelectObject(&redBrush);
 			pDC->Ellipse(x - r, y - r, x + r, y + r);
 		}
 	}
@@ -205,8 +227,8 @@ UINT CPatternGenerator1View::StartThread(LPVOID Param)
 		MyPoint.y = 300 + (((400 - 200)/2) * sin(pView->m_iCounter * 3));
 		pView->m_PointArray.Add(MyPoint);
 
-		MyPoint1.x = 437.5 + (((700 - 175) / 2) * cos(pView->m_iCounter));
-		MyPoint1.y = 300 + (((425 - 175) / 2) * sin(pView->m_iCounter));
+		MyPoint1.x = 475 + (((800 - 150) / 2) * cos(pView->m_iCounter));
+		MyPoint1.y = 300 + (((500 - 100) / 2) * sin(pView->m_iCounter));
 		pView->m_PointArray1.Add(MyPoint1);
 		
 		
