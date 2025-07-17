@@ -1,0 +1,16 @@
+﻿  PatternGenerator1View.cpp
+C:\Users\Savio\source\repos\PatternGenerator1\PatternGenerator1View.cpp(93,40): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Savio\source\repos\PatternGenerator1\PatternGenerator1View.cpp(93,33): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Savio\source\repos\PatternGenerator1\PatternGenerator1View.cpp(93,26): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Savio\source\repos\PatternGenerator1\PatternGenerator1View.cpp(93,19): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Savio\source\repos\PatternGenerator1\PatternGenerator1View.cpp(100,40): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Savio\source\repos\PatternGenerator1\PatternGenerator1View.cpp(100,33): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Savio\source\repos\PatternGenerator1\PatternGenerator1View.cpp(100,26): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Savio\source\repos\PatternGenerator1\PatternGenerator1View.cpp(100,19): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Savio\source\repos\PatternGenerator1\PatternGenerator1View.cpp(204,19): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
+C:\Users\Savio\source\repos\PatternGenerator1\PatternGenerator1View.cpp(205,19): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
+C:\Users\Savio\source\repos\PatternGenerator1\PatternGenerator1View.cpp(208,22): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
+C:\Users\Savio\source\repos\PatternGenerator1\PatternGenerator1View.cpp(209,20): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
+  PatternGenerator1.vcxproj -> C:\Users\Savio\source\repos\PatternGenerator1\Debug\PatternGenerator1.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
